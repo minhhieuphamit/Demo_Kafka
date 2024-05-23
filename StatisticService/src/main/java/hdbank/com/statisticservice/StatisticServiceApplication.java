@@ -22,8 +22,8 @@ public class StatisticServiceApplication {
         return new JsonMessageConverter();
     }
 
-    @Bean
-    DefaultErrorHandler errorHandler(KafkaOperations<String, Object> template) {
-        return new DefaultErrorHandler(new DeadLetterPublishingRecoverer(template), new FixedBackOff(1000L, 2));
-    }
+//    @Bean
+//    DefaultErrorHandler errorHandler(KafkaOperations<String, Object> template) {
+//        return new DefaultErrorHandler(new DeadLetterPublishingRecoverer(template), new FixedBackOff(1000L, 2));
+//    }
 }
