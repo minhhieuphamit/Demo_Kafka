@@ -4,4 +4,6 @@ import hdbank.com.statisticservice.entity.Statistic;
 
 public interface StatisticService {
     public void listen(Statistic statistic);
+
+    public void dltListen(Statistic statistic);
 }

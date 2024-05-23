@@ -38,7 +38,7 @@ public class PoolingServiceImpl implements PoolingService {
                     logger.error("Error: " + ex.getMessage());
                 } else {
                     System.out.println("Notification partition: " + result.getRecordMetadata().partition());
-                    logger.error("TRUE");
+                    logger.info("TRUE");
                     msg.setStatus(true);
                     messageRepository.save(msg);
                 }
@@ -53,7 +53,7 @@ public class PoolingServiceImpl implements PoolingService {
                     logger.error("Error: " + ex.getMessage());
                 } else {
                     System.out.println("Statistic partition: " + result.getRecordMetadata().partition());
-                    logger.error("TRUE");
+                    logger.info("TRUE");
                     stat.setStatus(true);
                     statisticRepository.save(stat);
                 }
